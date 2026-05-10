@@ -220,7 +220,7 @@ def to_excel_bytes(summary, detail):
 
 def show_work_card(work):
     st.subheader(f"{work['work_id']}｜{work['team']}——{work['title']}")
-    st.write(work.get("description", ""))
+    st.markdown(work.get("description", ""))
     imgs = split_paths(work.get("image_paths", ""))
     if imgs:
         st.markdown("**作品照片**")
