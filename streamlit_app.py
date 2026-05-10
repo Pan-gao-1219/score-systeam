@@ -93,6 +93,10 @@ def load_data_from_github():
     r = requests.get(url, headers=github_headers(), params={"ref": branch}, timeout=20)
     if r.status_code == 404:
         return {"scores": [], "votes": {}}, None
+    if r.status_code == 401:
+        raise RuntimeError("GitHub Token 无效或已过期（401），请在 Streamlit Cloud Secrets 中更新 token。")
+    if r.status_code == 403:
+        raise RuntimeError("GitHub Token 权限不足（403），请确认 token 勾选了 repo 权限。")
     r.raise_for_status()
     payload = r.json()
     raw = base64.b64decode(payload["content"]).decode("utf-8")
@@ -433,6 +437,8 @@ def main():
             page_admin()
         else:
             page_rubric()
+    except RuntimeError as e:
+        st.error(str(e))
     except requests.HTTPError as e:
         st.error("GitHub 数据读写失败，请检查 token、repo、branch、scores_path。")
         st.exception(e)
