@@ -270,13 +270,12 @@ def page_judge():
                 with col:
                     values[field] = st.number_input(label + f"（0-{max_score}）", 0, max_score, safe_int(existing.get(field, 0)), 1, help=help_text)
         st.markdown("### 扣分项 / 资格项")
-        c1, c2, c3 = st.columns(3)
+        c1, c2 = st.columns(2)
         with c1:
             common_error = st.checkbox("明显常识性错误（-10）", value=bool(existing.get("common_error", False)))
         with c2:
-            no_process = st.checkbox("未提交制作过程佐证材料（-20）", value=bool(existing.get("no_process_evidence", False)))
-        with c3:
             disqualified = st.checkbox("抄袭或现成商品模型（取消资格）", value=bool(existing.get("disqualified", False)))
+        no_process = False
         comment = st.text_area("评语", value=str(existing.get("comment", "")), height=120)
         preview = {**values, "common_error": common_error, "no_process_evidence": no_process}
         st.metric("专业评审原始分", professional_score(preview))
@@ -414,7 +413,6 @@ def page_rubric():
         st.dataframe(pd.DataFrame([{"评分项": label, "满分": max_score, "说明": help_text} for _, label, max_score, help_text in items]), use_container_width=True, hide_index=True)
     st.subheader("扣分项")
     st.write("- 存在明显常识性错误：-10 分")
-    st.write("- 未提交制作过程佐证材料：-20 分")
     st.write("- 使用现成商品模型或存在抄袭：取消参评资格")
 
 
