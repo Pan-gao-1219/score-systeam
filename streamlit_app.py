@@ -307,6 +307,58 @@ def page_judge():
         st.rerun()
 
 
+def diagnose_github():
+    st.subheader("GitHub 连接诊断")
+    if not github_configured():
+        st.error("未在 Secrets 中检测到 github.token 或 github.repo，请检查 Streamlit Cloud Secrets 配置。")
+        return
+    repo = secret("github", "repo")
+    branch = secret("github", "branch", "main")
+    scores_path = secret("github", "scores_path", "data/scores.json")
+    st.write(f"**repo:** `{repo}`　**branch:** `{branch}`　**scores_path:** `{scores_path}`")
+
+    # 1. 验证 token 身份
+    r0 = requests.get("https://api.github.com/user", headers=github_headers(), timeout=10)
+    if r0.status_code == 200:
+        login = r0.json().get("login", "?")
+        st.success(f"Token 有效，账号：**{login}**")
+    elif r0.status_code == 401:
+        st.error("Token 无效或已过期（401），请重新生成 Token 并更新 Secrets。")
+        return
+    else:
+        st.error(f"Token 验证失败：HTTP {r0.status_code}")
+        return
+
+    # 2. 验证仓库访问
+    r1 = requests.get(f"https://api.github.com/repos/{repo}", headers=github_headers(), timeout=10)
+    if r1.status_code == 200:
+        perm = r1.json().get("permissions", {})
+        st.success(f"仓库可访问。权限：push={perm.get('push')}, admin={perm.get('admin')}")
+        if not perm.get("push"):
+            st.error("Token 对该仓库没有写入权限（push=False）。请确认 Token 勾选了 repo 权限，且账号 **{login}** 是仓库 owner 或 collaborator。")
+            return
+    elif r1.status_code == 404:
+        st.error(f"仓库不存在或无访问权限：`{repo}`，请检查 repo 名称是否正确。")
+        return
+    else:
+        st.error(f"仓库访问失败：HTTP {r1.status_code}")
+        return
+
+    # 3. 验证文件读取
+    _, _, _, url = github_file_info()
+    r2 = requests.get(url, headers=github_headers(), params={"ref": branch}, timeout=10)
+    if r2.status_code == 200:
+        sha = r2.json().get("sha", "")[:8]
+        st.success(f"评分文件可读，SHA: `{sha}...`")
+    elif r2.status_code == 404:
+        st.warning("评分文件 scores.json 尚不存在，首次提交评分时会自动创建。")
+    else:
+        st.error(f"文件读取失败：HTTP {r2.status_code} — {r2.text[:300]}")
+        return
+
+    st.success("诊断完成，配置正常！可以正常读写 GitHub 数据。")
+
+
 def page_admin():
     st.header("管理员后台")
     password = st.text_input("管理员密码", type="password")
@@ -317,7 +369,7 @@ def page_admin():
     data = load_data()
     summary = build_summary(data, works)
     detail = scores_dataframe(data)
-    tab1, tab2, tab3, tab4 = st.tabs(["汇总排名", "评分明细", "网络投票分", "导出"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["汇总排名", "评分明细", "网络投票分", "导出", "GitHub诊断"])
     with tab1:
         cols = ["rank", "work_id", "team", "title", "judge_count", "professional_avg", "professional_weighted", "network_vote_score", "network_weighted", "final_score", "status"]
         st.dataframe(summary[cols].style.format({"professional_avg":"{:.2f}", "professional_weighted":"{:.2f}", "network_vote_score":"{:.2f}", "network_weighted":"{:.2f}", "final_score":"{:.2f}"}), use_container_width=True, hide_index=True)
@@ -346,6 +398,8 @@ def page_admin():
                 st.rerun()
             else:
                 st.error("确认文字不正确，未执行。")
+    with tab5:
+        diagnose_github()
 
 
 def page_rubric():
