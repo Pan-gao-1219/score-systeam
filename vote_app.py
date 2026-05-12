@@ -138,31 +138,46 @@ def page_vote():
     if "selected_work_id" not in st.session_state:
         st.session_state.selected_work_id = None
 
-    # 3 列卡片
-    cols = st.columns(3)
+    # 2 列卡片（内容更多，2列留出足够宽度）
+    cols = st.columns(2)
     for idx, (_, work) in enumerate(works.iterrows()):
         wid = work["work_id"]
         is_selected = st.session_state.selected_work_id == wid
-        with cols[idx % 3]:
+        with cols[idx % 2]:
             border_color = "#1d72b8" if is_selected else "#e0e0e0"
+            bg_color     = "#eef5ff"  if is_selected else "#fafafa"
             st.markdown(
                 f"""<div style="border:2px solid {border_color};border-radius:10px;
-                padding:10px;margin-bottom:12px;background:{'#eef5ff' if is_selected else '#fff'}">
-                <b>{wid} | {work['team']}</b><br>
-                <span style='color:#555;font-size:0.85em'>{work['title']}</span>
+                padding:12px 14px 4px 14px;margin-bottom:4px;background:{bg_color}">
+                <b style="font-size:1.05em">{wid} | {work['team']}</b><br>
+                <span style='color:#555;font-size:0.88em'>{work['title']}</span>
                 </div>""",
                 unsafe_allow_html=True,
             )
+
+            # 全部图片：2 列小图排列
             imgs = split_paths(work.get("image_paths", ""))
-            if imgs:
-                first = imgs[0]
-                if first.startswith("http") or Path(first).exists():
-                    st.image(first, use_container_width=True)
-            btn_label = "✅ 已选择" if is_selected else "投这一票"
-            btn_type = "primary" if is_selected else "secondary"
+            valid_imgs = [p for p in imgs if p.startswith("http") or Path(p).exists()]
+            if valid_imgs:
+                img_cols = st.columns(min(len(valid_imgs), 2))
+                for i, img_path in enumerate(valid_imgs):
+                    with img_cols[i % 2]:
+                        st.image(img_path, use_container_width=True, caption=f"图 {i+1}")
+
+            # 视频（折叠展示，避免页面过长）
+            vids = split_paths(work.get("video_paths", ""))
+            valid_vids = [v for v in vids if v.startswith("http") or Path(v).exists()]
+            if valid_vids:
+                with st.expander("▶ 查看视频"):
+                    for v in valid_vids:
+                        st.video(v)
+
+            btn_label = "✅ 已选择此作品" if is_selected else "投这一票"
+            btn_type  = "primary" if is_selected else "secondary"
             if st.button(btn_label, key=f"btn_{wid}", type=btn_type, use_container_width=True):
                 st.session_state.selected_work_id = wid
                 st.rerun()
+            st.markdown("<div style='margin-bottom:20px'></div>", unsafe_allow_html=True)
 
     # 提交区域
     selected_id = st.session_state.selected_work_id
