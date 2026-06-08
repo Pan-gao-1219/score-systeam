@@ -165,6 +165,10 @@ def existing_score(scores, jid, work_id):
 
 
 def professional_score(row):
+    # 新版：教师直接填写 0-100 的最终总分
+    if row.get("manual_score") not in (None, ""):
+        return max(0, min(100, safe_int(row.get("manual_score"))))
+    # 兼容旧版按细则逐项打分的记录
     raw = sum(safe_int(row.get(f, 0)) for f in SCORE_FIELDS)
     if row.get("common_error"):
         raw -= 10
@@ -261,24 +265,21 @@ def page_judge():
     show_work_card(work)
     st.divider()
 
+    # 已评过则取上次的分数作为默认值，方便老师直接修改
+    default_score = safe_int(existing.get("manual_score", professional_score(existing))) if existing else 0
+    if existing:
+        st.info(f"你之前给该作品打了 **{default_score}** 分，可在下方直接修改后重新提交。")
+
     with st.form("score_form"):
-        values = {}
-        for group, items in RUBRIC:
-            st.markdown(f"### {group}")
-            cols = st.columns(len(items))
-            for col, (field, label, max_score, help_text) in zip(cols, items):
-                with col:
-                    values[field] = st.number_input(label + f"（0-{max_score}）", 0, max_score, safe_int(existing.get(field, 0)), 1, help=help_text)
-        st.markdown("### 扣分项 / 资格项")
-        c1, c2 = st.columns(2)
-        with c1:
-            common_error = st.checkbox("明显常识性错误（-10）", value=bool(existing.get("common_error", False)))
-        with c2:
-            disqualified = st.checkbox("抄袭或现成商品模型（取消资格）", value=bool(existing.get("disqualified", False)))
-        no_process = False
-        comment = st.text_area("评语", value=str(existing.get("comment", "")), height=120)
-        preview = {**values, "common_error": common_error, "no_process_evidence": no_process}
-        st.metric("专业评审原始分", professional_score(preview))
+        score = st.number_input(
+            "最终评分（0-100）", 0, 100, default_score, 1,
+            help="请综合作品表现，直接给出 0-100 的总分。评分细则见侧边栏「评分细则」页。",
+        )
+        disqualified = st.checkbox(
+            "抄袭或使用现成商品模型（取消参评资格）",
+            value=bool(existing.get("disqualified", False)),
+        )
+        comment = st.text_area("评语（可选）", value=str(existing.get("comment", "")), height=100)
         submitted = st.form_submit_button("提交评分", type="primary")
 
     if submitted:
@@ -292,9 +293,7 @@ def page_judge():
             "work_id": work_id,
             "team": work["team"],
             "title": work["title"],
-            **values,
-            "common_error": bool(common_error),
-            "no_process_evidence": bool(no_process),
+            "manual_score": int(score),
             "disqualified": bool(disqualified),
             "comment": comment.strip(),
         }
@@ -306,7 +305,7 @@ def page_judge():
         else:
             scores.append(row)
         save_data(data, f"score: {jid} -> {work_id}")
-        st.success("已提交。再次提交同一作品会覆盖上一次评分。")
+        st.success("评分已提交。如需修改，回到本页重新填写提交即可。")
         st.rerun()
 
 
