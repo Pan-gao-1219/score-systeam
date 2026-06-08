@@ -275,10 +275,6 @@ def page_judge():
             "最终评分（0-100）", 0, 100, default_score, 1,
             help="请综合作品表现，直接给出 0-100 的总分。评分细则见侧边栏「评分细则」页。",
         )
-        disqualified = st.checkbox(
-            "抄袭或使用现成商品模型（取消参评资格）",
-            value=bool(existing.get("disqualified", False)),
-        )
         comment = st.text_area("评语（可选）", value=str(existing.get("comment", "")), height=100)
         submitted = st.form_submit_button("提交评分", type="primary")
 
@@ -294,7 +290,8 @@ def page_judge():
             "team": work["team"],
             "title": work["title"],
             "manual_score": int(score),
-            "disqualified": bool(disqualified),
+            # 教师页已不再设置“取消资格”，仅沿用旧值以兼容后台排名逻辑
+            "disqualified": bool(existing.get("disqualified", False)),
             "comment": comment.strip(),
         }
         scores = data.setdefault("scores", [])
