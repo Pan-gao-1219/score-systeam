@@ -167,6 +167,20 @@
       "manual_score": 92,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "cac8a24c-4a92-4d97-9f08-d69a9e7d61fb",
+      "created_at": "2026-06-09 19:53:47",
+      "updated_at": "2026-06-09 19:53:47",
+      "judge_id": "赵淑娟-9519",
+      "judge_name": "赵淑娟",
+      "judge_code": "9519",
+      "work_id": "12",
+      "team": "青岛酒店管理职业技术学院",
+      "title": "西北典型地貌组合地理模型",
+      "manual_score": 90,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
