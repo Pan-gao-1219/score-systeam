@@ -391,6 +391,20 @@
       "manual_score": 81,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "d897a998-bf6c-4532-88df-90b66afe48ba",
+      "created_at": "2026-06-09 21:40:49",
+      "updated_at": "2026-06-09 21:40:49",
+      "judge_id": "来老师-0909",
+      "judge_name": "来老师",
+      "judge_code": "0909",
+      "work_id": "10",
+      "team": "地球各圈层关系模型",
+      "title": "地球各圈层关系模型",
+      "manual_score": 92,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
