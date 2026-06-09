@@ -377,6 +377,20 @@
       "manual_score": 81,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "b3ddb756-f364-4740-bd7a-fe84f35e3071",
+      "created_at": "2026-06-09 21:39:48",
+      "updated_at": "2026-06-09 21:39:48",
+      "judge_id": "来老师-0909",
+      "judge_name": "来老师",
+      "judge_code": "0909",
+      "work_id": "09",
+      "team": "高雅队",
+      "title": "山河入怀",
+      "manual_score": 81,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
