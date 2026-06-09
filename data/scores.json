@@ -447,6 +447,20 @@
       "manual_score": 84,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "59e719d7-d774-4f32-a5e1-5f954c26d74f",
+      "created_at": "2026-06-09 21:46:23",
+      "updated_at": "2026-06-09 21:46:23",
+      "judge_id": "来老师-0909",
+      "judge_name": "来老师",
+      "judge_code": "0909",
+      "work_id": "14",
+      "team": "关中王队",
+      "title": "马山地质建模",
+      "manual_score": 92,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
