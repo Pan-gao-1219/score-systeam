@@ -349,6 +349,20 @@
       "manual_score": 82,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "c578a539-41e0-44d9-9167-7e99223b3695",
+      "created_at": "2026-06-09 21:34:14",
+      "updated_at": "2026-06-09 21:34:14",
+      "judge_id": "来老师-0909",
+      "judge_name": "来老师",
+      "judge_code": "0909",
+      "work_id": "07",
+      "team": "沉积分水小队",
+      "title": "沉积分水地质模型",
+      "manual_score": 91,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
