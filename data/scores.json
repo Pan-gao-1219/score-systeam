@@ -139,6 +139,20 @@
       "manual_score": 95,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "b3553084-45c7-438c-bffa-344aabe5d573",
+      "created_at": "2026-06-09 19:52:28",
+      "updated_at": "2026-06-09 19:52:28",
+      "judge_id": "赵淑娟-9519",
+      "judge_name": "赵淑娟",
+      "judge_code": "9519",
+      "work_id": "10",
+      "team": "地球各圈层关系模型",
+      "title": "地球各圈层关系模型",
+      "manual_score": 90,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
