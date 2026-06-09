@@ -475,6 +475,20 @@
       "manual_score": 86,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "1968dfc8-69f5-4622-91bb-e38d9a60e5f4",
+      "created_at": "2026-06-09 21:48:14",
+      "updated_at": "2026-06-09 21:48:14",
+      "judge_id": "来老师-0909",
+      "judge_name": "来老师",
+      "judge_code": "0909",
+      "work_id": "16",
+      "team": "地大物博队",
+      "title": "喀斯特地貌景观模型",
+      "manual_score": 83,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
