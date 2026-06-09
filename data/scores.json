@@ -335,6 +335,20 @@
       "manual_score": 85,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "dec36365-5d00-48df-a217-ec6ef0e9e216",
+      "created_at": "2026-06-09 21:32:26",
+      "updated_at": "2026-06-09 21:32:26",
+      "judge_id": "来老师-0909",
+      "judge_name": "来老师",
+      "judge_code": "0909",
+      "work_id": "06",
+      "team": "Z²队",
+      "title": "海蚀地貌",
+      "manual_score": 82,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
