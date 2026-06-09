@@ -195,6 +195,20 @@
       "manual_score": 94,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "9d60b5a2-38a6-4902-804e-7c5ded61124c",
+      "created_at": "2026-06-09 19:55:36",
+      "updated_at": "2026-06-09 19:55:36",
+      "judge_id": "赵淑娟-9519",
+      "judge_name": "赵淑娟",
+      "judge_code": "9519",
+      "work_id": "14",
+      "team": "关中王队",
+      "title": "马山地质建模",
+      "manual_score": 96,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
