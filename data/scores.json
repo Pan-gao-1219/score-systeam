@@ -293,6 +293,20 @@
       "manual_score": 86,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "19ba8356-ada8-40c7-8c84-deb9ec10358c",
+      "created_at": "2026-06-09 21:29:28",
+      "updated_at": "2026-06-09 21:29:28",
+      "judge_id": "来老师-0909",
+      "judge_name": "来老师",
+      "judge_code": "0909",
+      "work_id": "03",
+      "team": "梦之队",
+      "title": "地质模型",
+      "manual_score": 85,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
