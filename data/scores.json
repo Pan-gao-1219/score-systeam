@@ -363,6 +363,20 @@
       "manual_score": 91,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "4111ed88-52c4-46d2-898b-3d7c3858b39a",
+      "created_at": "2026-06-09 21:37:18",
+      "updated_at": "2026-06-09 21:37:18",
+      "judge_id": "来老师-0909",
+      "judge_name": "来老师",
+      "judge_code": "0909",
+      "work_id": "08",
+      "team": "地心探索队",
+      "title": "海蚀地貌模型",
+      "manual_score": 81,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
