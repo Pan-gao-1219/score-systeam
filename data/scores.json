@@ -223,6 +223,20 @@
       "manual_score": 95,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "70de1673-e59a-43de-8f7d-56b31eaa6cf6",
+      "created_at": "2026-06-09 19:57:06",
+      "updated_at": "2026-06-09 19:57:06",
+      "judge_id": "赵淑娟-9519",
+      "judge_name": "赵淑娟",
+      "judge_code": "9519",
+      "work_id": "16",
+      "team": "地大物博队",
+      "title": "喀斯特地貌景观模型",
+      "manual_score": 94,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
