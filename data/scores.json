@@ -321,6 +321,20 @@
       "manual_score": 83,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "61bef0d2-a44a-489d-9dc0-4857252cd7ec",
+      "created_at": "2026-06-09 21:31:26",
+      "updated_at": "2026-06-09 21:31:26",
+      "judge_id": "来老师-0909",
+      "judge_name": "来老师",
+      "judge_code": "0909",
+      "work_id": "05",
+      "team": "奶龙队",
+      "title": "河流的起源发育与冰川地貌",
+      "manual_score": 85,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
