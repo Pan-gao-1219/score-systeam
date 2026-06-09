@@ -97,6 +97,20 @@
       "manual_score": 88,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "b33dff33-d2eb-4725-b37b-1633e89cfb19",
+      "created_at": "2026-06-09 16:26:36",
+      "updated_at": "2026-06-09 16:26:36",
+      "judge_id": "赵淑娟-9519",
+      "judge_name": "赵淑娟",
+      "judge_code": "9519",
+      "work_id": "07",
+      "team": "沉积分水小队",
+      "title": "沉积分水地质模型",
+      "manual_score": 96,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
