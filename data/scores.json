@@ -69,6 +69,20 @@
       "manual_score": 90,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "a63ab13b-9c27-4bfb-88cb-365a7693abc9",
+      "created_at": "2026-06-09 16:25:20",
+      "updated_at": "2026-06-09 16:25:20",
+      "judge_id": "赵淑娟-9519",
+      "judge_name": "赵淑娟",
+      "judge_code": "9519",
+      "work_id": "05",
+      "team": "奶龙队",
+      "title": "河流的起源发育与冰川地貌",
+      "manual_score": 93,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
