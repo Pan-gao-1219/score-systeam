@@ -251,6 +251,20 @@
       "manual_score": 93,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "5954b703-af6c-4209-99b1-dfd4b5458d26",
+      "created_at": "2026-06-09 19:58:19",
+      "updated_at": "2026-06-09 19:58:19",
+      "judge_id": "赵淑娟-9519",
+      "judge_name": "赵淑娟",
+      "judge_code": "9519",
+      "work_id": "18",
+      "team": "19号",
+      "title": "古生物模型",
+      "manual_score": 94,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
