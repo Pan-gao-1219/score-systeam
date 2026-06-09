@@ -153,6 +153,20 @@
       "manual_score": 90,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "24211686-4d35-4e46-a328-817c44faa239",
+      "created_at": "2026-06-09 19:53:11",
+      "updated_at": "2026-06-09 19:53:11",
+      "judge_id": "赵淑娟-9519",
+      "judge_name": "赵淑娟",
+      "judge_code": "9519",
+      "work_id": "11",
+      "team": "轻舟已撞大冰山队",
+      "title": "冰山模型",
+      "manual_score": 92,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
