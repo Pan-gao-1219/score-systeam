@@ -83,6 +83,20 @@
       "manual_score": 93,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "c8d744d3-bac2-4b76-a121-e9e49fc3ca0c",
+      "created_at": "2026-06-09 16:26:11",
+      "updated_at": "2026-06-09 16:26:11",
+      "judge_id": "赵淑娟-9519",
+      "judge_name": "赵淑娟",
+      "judge_code": "9519",
+      "work_id": "06",
+      "team": "Z²队",
+      "title": "海蚀地貌",
+      "manual_score": 88,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
