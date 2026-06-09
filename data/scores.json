@@ -279,6 +279,20 @@
       "manual_score": 90,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "23958889-b5fa-4ecb-b185-ce3c02349aa8",
+      "created_at": "2026-06-09 21:27:49",
+      "updated_at": "2026-06-09 21:27:49",
+      "judge_id": "来老师-0909",
+      "judge_name": "来老师",
+      "judge_code": "0909",
+      "work_id": "02",
+      "team": "从容应队",
+      "title": "冰川地貌模型",
+      "manual_score": 86,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
