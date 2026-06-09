@@ -125,6 +125,20 @@
       "manual_score": 87,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "d60038af-4962-4192-9ee9-f652d1b1f41f",
+      "created_at": "2026-06-09 19:51:54",
+      "updated_at": "2026-06-09 19:51:54",
+      "judge_id": "赵淑娟-9519",
+      "judge_name": "赵淑娟",
+      "judge_code": "9519",
+      "work_id": "09",
+      "team": "高雅队",
+      "title": "山河入怀",
+      "manual_score": 95,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
