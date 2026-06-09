@@ -419,6 +419,20 @@
       "manual_score": 82,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "ca7b0152-6fd3-4165-b509-cfa3a8868db8",
+      "created_at": "2026-06-09 21:44:50",
+      "updated_at": "2026-06-09 21:44:50",
+      "judge_id": "来老师-0909",
+      "judge_name": "来老师",
+      "judge_code": "0909",
+      "work_id": "12",
+      "team": "青岛酒店管理职业技术学院",
+      "title": "西北典型地貌组合地理模型",
+      "manual_score": 88,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
