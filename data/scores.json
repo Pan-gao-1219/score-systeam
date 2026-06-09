@@ -41,6 +41,20 @@
       "manual_score": 93,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "450d35a3-bc28-4f6b-95ff-d0144a6773d0",
+      "created_at": "2026-06-09 16:23:35",
+      "updated_at": "2026-06-09 16:23:35",
+      "judge_id": "赵淑娟-9519",
+      "judge_name": "赵淑娟",
+      "judge_code": "9519",
+      "work_id": "03",
+      "team": "梦之队",
+      "title": "地质模型",
+      "manual_score": 92,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
