@@ -489,6 +489,20 @@
       "manual_score": 83,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "36aeca6d-fdad-4c85-8c90-36d31aedc8dc",
+      "created_at": "2026-06-09 21:48:52",
+      "updated_at": "2026-06-09 21:48:52",
+      "judge_id": "来老师-0909",
+      "judge_name": "来老师",
+      "judge_code": "0909",
+      "work_id": "17",
+      "team": "6组",
+      "title": "火山湖模型",
+      "manual_score": 85,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
