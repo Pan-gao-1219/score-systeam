@@ -13,6 +13,20 @@
       "manual_score": 100,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "ba2f95ba-67fd-4ed4-ba91-f0a6379f44cf",
+      "created_at": "2026-06-09 16:11:24",
+      "updated_at": "2026-06-09 16:11:24",
+      "judge_id": "赵淑娟-9519",
+      "judge_name": "赵淑娟",
+      "judge_code": "9519",
+      "work_id": "01",
+      "team": "3A小队",
+      "title": "火山地貌模型作品",
+      "manual_score": 95,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
