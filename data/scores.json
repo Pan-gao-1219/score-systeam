@@ -265,6 +265,20 @@
       "manual_score": 94,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "8bb93e9e-757c-402d-b132-e4b59253d41a",
+      "created_at": "2026-06-09 21:23:21",
+      "updated_at": "2026-06-09 21:23:21",
+      "judge_id": "来志庆-0909",
+      "judge_name": "来志庆",
+      "judge_code": "0909",
+      "work_id": "01",
+      "team": "3A小队",
+      "title": "火山地貌模型作品",
+      "manual_score": 90,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
