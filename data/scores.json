@@ -405,6 +405,20 @@
       "manual_score": 92,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "76623c6c-cf80-41d7-b668-6f24d1e426a8",
+      "created_at": "2026-06-09 21:44:24",
+      "updated_at": "2026-06-09 21:44:24",
+      "judge_id": "来老师-0909",
+      "judge_name": "来老师",
+      "judge_code": "0909",
+      "work_id": "11",
+      "team": "轻舟已撞大冰山队",
+      "title": "冰山模型",
+      "manual_score": 82,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
