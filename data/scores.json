@@ -27,6 +27,20 @@
       "manual_score": 95,
       "disqualified": false,
       "comment": ""
+    },
+    {
+      "record_id": "01b6cbeb-0a5c-46ef-9311-149893d86890",
+      "created_at": "2026-06-09 16:11:53",
+      "updated_at": "2026-06-09 16:11:53",
+      "judge_id": "赵淑娟-9519",
+      "judge_name": "赵淑娟",
+      "judge_code": "9519",
+      "work_id": "02",
+      "team": "从容应队",
+      "title": "冰川地貌模型",
+      "manual_score": 93,
+      "disqualified": false,
+      "comment": ""
     }
   ],
   "votes": {}
